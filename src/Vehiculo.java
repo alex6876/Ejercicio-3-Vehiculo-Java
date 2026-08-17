@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class Vehiculo {
     String Marca;
 
@@ -43,34 +41,14 @@ public class Vehiculo {
 
 
     public static void main(String[] args) {
-        Scanner teclado = new Scanner(System.in);
 
-        //Ingresar los datos
-
-        System.out.println("Ingrese Marca: ");
-        String Marca = teclado.nextLine();
-
-        System.out.println("Ingrese Modelo: ");
-        String Modelo = teclado.nextLine();
-
-        System.out.println("Ingrese Velocidad Actual: ");
-        Double VelocidadActual = teclado.nextDouble();
-
-        Vehiculo vehiculo = new Vehiculo(Marca, Modelo, VelocidadActual);
+        Vehiculo vehiculo = new Vehiculo("Toyota", "Corolla", 150);
         vehiculo.EstadoActual();
 
-        System.out.println("Ingrese cantidad de aceleración: ");
-        double Cantidad = teclado.nextDouble();
-
-        vehiculo.Acelerar(Cantidad);
-
+        vehiculo.Acelerar(55);
         vehiculo.EstadoActual();
 
-        System.out.println("Cuanto desea frenar?: ");
-        double Frenar = teclado.nextDouble();
-
-        vehiculo.Frenar(Frenar);
-
+        vehiculo.Frenar(100);
         vehiculo.EstadoActual();
 
     }
